@@ -20,7 +20,8 @@ mkdir /config &&\
 chmod 777 /download && \
 chmod 777 /download/incomplete && \
 chmod 777 /config && \
-apk del wget curl --purge
+apk del wget curl --purge && \
+chmod 755 /usr/bin/my-daemon
 WORKDIR /usr/bin
 
 COPY settings.json /config/settings.json
